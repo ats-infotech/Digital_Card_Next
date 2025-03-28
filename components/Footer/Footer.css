@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .atsFooter {
+        @apply fixed bottom-0 left-0 w-[100%] z-[1] text-center bg-white shadow-custom overflow-hidden
+    }
+    .listItemsIcon {
+        @apply mt-[10px] mb-[4px] 
+    }
+    .listItemsName {
+        @apply !font-poppins !font-[600] !text-footer !leading-[18px]
+    }
+    .listItems{
+        @apply !flex !justify-center 
+    }
+    .listItems:hover .listItemsIcon,
+    .listItems:hover .listItemsName,
+    .listItems.active .listItemsIcon,
+    .active .listItemsName {
+        @apply  transition-all duration-[500]
+    }
+}
+
+.listItems.active::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: -8px;
+}
+
+@media screen and (max-width:349px) {
+    .listItemsName {
+        @apply !text-footer_md
+    }
+}
+
+@media screen and (max-width:335px) {
+    .listItemsName {
+        @apply !text-footer_sm
+    }
+}

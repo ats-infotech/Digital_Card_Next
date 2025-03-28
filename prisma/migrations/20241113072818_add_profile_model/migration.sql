@@ -1,0 +1,10 @@
+-- CreateTable
+CREATE TABLE "Profile" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "Phone" TEXT NOT NULL,
+    "Tel" TEXT NOT NULL,
+    "Address" TEXT NOT NULL,
+    "Insta" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);

@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fsbtn{
+    min-width: 140px!important;
+    font-weight: 600 !important;
+    font-size: 14px!important;
+    height: 40px!important;
+    border-radius: 8px!important;
+}
+
+.welcome-title{
+    margin-top: 10px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-inline: 20px !important;
+}
+
+@layer components {
+    .welcome-title h2{
+        @apply !font-poppins !font-[600] !text-adminwelcometitle
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .fsbtn{
+        min-width: 110px !important;
+        font-size: 10px !important;
+    }
+    .welcome-title h2{
+        @apply !text-adminwelcometitle_mobile
+    }
+}

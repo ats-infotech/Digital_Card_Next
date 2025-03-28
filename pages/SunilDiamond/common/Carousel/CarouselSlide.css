@@ -1,0 +1,456 @@
+.carousel-div{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.18);
+    height: 580px;
+    border-radius: 20px;
+}
+
+.flickity-page-dots {
+    display: none;
+}
+.flickity-page-dot {
+    display: none;
+}
+
+.flickity-prev-next-button{
+    width: 41px !important;
+    height: 41px !important;
+    display: flex !important ;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 0px 4px rgba(0,0,0,0.25);
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+    position: relative !important;
+    left: 0 !important;
+    top: 0!important;
+}
+
+.flickity-button:focus {
+    outline: none !important;
+    box-shadow: 0 0px 4px rgba(0,0,0,0.25) !important;
+}
+
+.flickity-prev-next-button svg{
+    height: 20px !important;
+    width: 20px !important;
+    color: var(--yellowmild) !important;
+}
+
+.flickity-button-icon{
+    color: var(--greydark);
+    height: 25px;
+    width: 25px;
+}
+
+.carouselSlide-1{
+    margin-inline: auto;
+    max-width: 430px;
+    height: 300px;
+    width: 100%;
+    border-radius: 20%;
+    overflow: visible;
+}
+
+.carouselSlide {
+    margin-inline: auto;
+    width: auto;
+    max-width: 350px;
+    height: 300px;
+    width: 100%;
+    border-radius: 20%;
+}
+
+.carousel-cell {
+    margin-top: 67.5px;
+    margin-inline: 10px;
+    margin-bottom: 25px;
+    max-width: 100px;
+    height: 100px;
+    border-radius: 70px;
+    padding: 15px;
+    transition: all 0.5s ease;
+    box-shadow: none;
+    opacity:0.6;
+    border: 3px solid transparent;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected{
+    margin-inline: 10px;
+    margin-bottom: 25px;
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    border-radius: 70px;
+    filter: blur(0);
+    margin-top: 1px;
+    opacity: 1;
+    background: var(--white);
+    transition: none;
+    border-color: var(--yellowmild);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.18);
+    z-index: 1;
+}
+
+.carousel-cell-1{
+    margin-right: 10px;
+    max-width: 335px;
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    box-shadow: none;
+    counter-increment: carousel-cell;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-cell-1.is-selected{
+    height: 300px;
+    opacity: 1;
+    transition: none;
+    z-index: 1;
+}
+
+.carousel-img-1{
+    height: 180px;
+    width: 200px;
+}
+
+.carousel-status{
+    display: none;
+}
+
+.carousel-img{
+    position: relative;
+    height: 50px;
+    width: 56px;
+}
+
+.productinfo{
+    font-size: 16px;
+}
+
+.carousel-cell.is-selected .round-shape{
+    border-color: transparent;
+}
+
+.round-shape{
+    border: 2px solid var(--greylight);
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: -7px;
+    left: -7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploresection{
+    position: relative;
+    width: 120px;
+    left: 215px;
+    top: 20px;
+}
+
+@media only screen and (max-width: 425px){
+    .exploresection{
+        left: 205px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .exploresection{
+        left: 195px;
+    }
+}
+
+@media only screen and (max-width: 410px){
+    .carousel-div{
+        height: 540px;
+    }
+    .flickity-prev-next-button {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .carousel-img{
+        height: 40px;
+        width: 55px;
+    }
+    .round-shape{
+        width: 70px;
+        height: 70px;
+
+    }
+    .carousel-cell {
+        max-width: 90px;
+        height: 90px;
+    }
+    
+    .carousel-cell.is-selected{
+        max-width: 90px;
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width: 405px){
+    .exploresection{
+        left: 185px;
+    }
+}
+
+@media only screen and (max-width: 395px){
+    .exploresection{
+        left: 175px;
+    }
+}
+
+@media only screen and (max-width: 385px){
+    .exploresection{
+        left: 165px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .exploresection{
+        left: 155px;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .carouselSlide {
+        max-width: 331px;
+        height: 300px;
+    }
+    .carousel-div{
+        height: 530px;
+    }
+    .flickity-prev-next-button {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .carousel-img{
+        height: 35px;
+        width: 55px;
+    }
+    .round-shape{
+        width: 60px;
+        height: 60px;
+
+    }
+    .carousel-cell {
+        max-width: 80px;
+        height: 80px;
+    }
+    
+    .carousel-cell.is-selected{
+        max-width: 80px;
+        height: 80px;
+    }
+    .expmorebtn{
+        width: 120px !important;
+        font-size: 12px !important;
+    }
+    .exploresection{
+        left: 160px;
+    }
+}
+
+@media only screen and (max-width: 365px){
+    .carouselSlide {
+        max-width: 332px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .carouselSlide {
+        max-width: 334px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+    
+}
+
+@media only screen and (max-width: 355px){
+    .exploresection{
+        left: 150px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .carouselSlide {
+        max-width: 335px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+    .flickity-prev-next-button {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .carousel-img{
+        height: 30px;
+        width: 50px;
+    }
+    .round-shape{
+        width: 50px;
+        height: 50px;
+
+    }
+    .carousel-cell {
+        max-width: 70px;
+        height: 70px;
+    }
+    
+    .carousel-cell.is-selected{
+        max-width: 70px;
+        height: 70px;
+    }
+
+    .expmorebtn{
+        width: 110px !important;
+        font-size: 11px !important;
+    }
+    .exploresection{
+        left: 155px;
+    }
+}
+
+@media only screen and (max-width: 345px){
+    .carouselSlide {
+        max-width: 336px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    .carouselSlide {
+        max-width: 336px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 335px){
+    .carouselSlide {
+        max-width: 336px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+    .exploresection{
+        left: 145px;
+    }
+}
+
+@media only screen and (max-width: 330px){
+    .carouselSlide {
+        max-width: 338px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+    .carousel-div{
+        height: 530px;
+    }
+    .flickity-prev-next-button {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .carousel-img{
+        height: 30px;
+        width: 50px;
+    }
+    .round-shape{
+        width: 50px;
+        height: 50px;
+
+    }
+    .carousel-cell {
+        max-width: 70px;
+        height: 70px;
+    }
+    
+    .carousel-cell.is-selected{
+        max-width: 70px;
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 325px){
+    .carouselSlide {
+        max-width: 338px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 130px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+    .exploresection{
+        left: 135px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .carouselSlide {
+        max-width: 340px;
+        height: 300px;
+    }
+    .carousel-img-1{
+        height: 150px;
+        width: 150px;
+    }
+    .productinfo{
+        font-size: 16px;
+    }
+}

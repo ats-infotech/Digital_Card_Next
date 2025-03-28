@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    margin: 0 !important; 
+}
+
+.catloginput input:focus {
+    outline: none !important;
+}
+
+input[type="checkbox"] {
+    border-color: var(--purpledark);
+}
+
+@layer components {
+    .logoutbutton{
+        @apply !mt-[20px] !font-[600] !font-poppins !border-2 !border-solid !border-transparent !p-2 !text-white !w-[200px] !rounded-[10px] hover:!bg-white
+    }
+    .addbutton{
+        @apply !mt-[30px] !normal-case !font-[600] !font-poppins !border-2 !border-solid !border-transparent !p-2 !text-white !w-[50%] !rounded-[10px] hover:!bg-white 
+    }
+    .catloginput{
+        @apply w-[100%] !p-2 !rounded-[10px] focus:outline-none
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .addbutton{
+        @apply !text-adminbutton_sm
+    }
+}

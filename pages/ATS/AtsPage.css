@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --linear-orange: linear-gradient(90deg, #F85668 0%, #F59950 100%);
+}
+
+.sildeSection h2,
+.sildeSection .console-container {
+  background: var(--linear-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body {
+  background-image: url('https://watermark.lovepik.com/background/20220426/large/lovepik-digital-signal-technology-city-background-image_402159582.jpg');
+}
+
+@layer components {
+  .AtsMainBox {
+    @apply !w-[100%] !max-w-[430px] !mb-[20px] !bg-white
+  }
+
+  .flex-wrapper {
+    @apply !flex-nowrap
+  }
+
+  .AtsHomePage {
+    @apply !bg-white
+  }
+
+  .AtsHomePage .sildeSection {
+    @apply !bg-[url('../../assets/image/ats/HomeBg.png')] !bg-no-repeat !w-[100%] !bg-center !bg-cover !pt-[56px] !pb-[10px] !px-[10px]
+  }
+
+  .sildeSection h2 {
+    @apply !pt-[20px] !mb-[10px]
+  }
+
+  .sildeSection h2, .sildeSection .console-container {
+    @apply !font-[600] !text-subtitle !leading-subtitlelh !text-center !font-poppins
+  }
+
+  .sildeSection .console-container {
+    @apply !h-[35px]
+  }
+
+  .socialMediasection {
+    @apply !flex !items-end !justify-between !w-[100%]
+  }
+
+  .socialMedia {
+    @apply !w-[100%] !max-w-[150px] !bg-white !rounded-[24px] !py-[8px] !px-[16px] !flex !items-center !justify-between !mt-[20px]
+  }
+
+  .qrsection {
+    @apply !w-[85px] !h-[85px] !animate-fade !mb-[10px]
+  }
+
+  .info-description {
+    @apply !py-[30px]
+  }
+
+  .info-description h6 {
+    @apply !font-[600] !font-poppins !text-desc !leading-desclh !text-center !text-lightblack
+  }
+
+  .countersection {
+    @apply !flex !flex-wrapper !items-center !gap-[10px] !pb-[10px]
+  }
+
+  .ServicePage {
+    @apply !bg-white !pt-[30px]
+  }
+
+  .servicesection {
+    @apply !flex !flex-col !justify-center !items-center
+  }
+
+  .servicesectioninfo {
+    @apply !w-[100%] !h-[450px] !my-[20px] !rounded-[20px] !shadow-[0_0px_20px_rgba(59,54,99,0.12)] !bg-bluebg p-[40px] !flex !flex-col !justify-between
+  }
+
+  .serviceimagesection{
+    @apply h-[130px] w-[170px]
+  }
+
+  .ServicePage h4 {
+    @apply !font-[600] !font-poppins !text-subtitle !leading-subtitlelh !text-center !text-bluedark !mb-[10px]
+  }
+
+  .servicesection h5 {
+    @apply !font-[600] !font-poppins !text-atsservicetitle !leading-atsservicetitlelh !text-white
+  }
+
+  .servicesection h6 {
+    @apply !font-[600] !font-poppins !text-atsservicedesc !leading-atsservicedesclh !text-white
+  }
+
+  .servicebutton{
+    @apply !bg-white !h-[40px] !w-[130px] !rounded-[38px]
+  }
+
+  .servicebuttonsection{
+    @apply !flex !items-center !justify-between !w-[80%]
+  }
+
+  .servicebuttonsection h6{
+    @apply !text-atsservicebutton !leading-atsservicebuttonlh !font-poppins !font-[600] !text-bluebg !m-0 !normal-case
+  }
+
+  .servicebuttonsection svg{
+    @apply !h-[17px] !w-[17px] !text-bluebg
+  }
+
+  .explorehere h6 {
+    @apply !font-poppins !font-[600] !text-atsexplore !leading-atsexplorelh !text-blackgrey !text-center 
+  }
+
+  .contactPage {
+    @apply !py-[30px] !px-[30px] !bg-white !flex !items-center !flex-wrap !gap-[21px] !justify-center
+  }
+
+  .contactBox {
+    @apply !w-[174px]
+  }
+
+  .contactBox h6 {
+    @apply !font-poppins !font-[600] !text-atscontactinfo !leading-atscontactinfolh !py-[11px] !shadow-default !text-center !text-orange !rounded-[10px]
+  }
+
+  .contactBoxsubsection {
+    @apply !bg-orange !w-[40px] !h-[40px] !rounded-[50px] !flex !items-center !justify-center !mx-auto !mb-[-7px] !text-center !relative
+  }
+
+  .contactmessage {
+    @apply !pb-[90px] !bg-white
+  }
+
+  .contactmessageiframesection {
+    @apply !overflow-hidden !h-[250px] !shadow-default !rounded-[10px] !mapwrapper !relative !mb-[35px]
+  }
+
+  .iframeloadingsection {
+    @apply !flex !justify-center !items-center !h-[100%]
+  }
+
+  .clickmap {
+    @apply !hidden
+  }
+
+  .mapwrapper:hover .clickmap {
+    @apply !block !absolute !top-0 !left-0 !right-0 !bottom-0 !flex !items-center !justify-center !bg-black !opacity-10 !text-white !font-poppins !text-clickmap !font-[600]
+  }
+
+  .letsgetInTouch {
+    @apply !shadow-default !rounded-[10px] !py-[20px] !px-[25px]
+  }
+
+  .letsgetInTouch h3 {
+    @apply !font-poppins !font-[600] !text-atsgetintouchtitle !leading-atsgetintouchtitlelh !text-orange !mb-[3px]
+  }
+
+  .letsgetInTouch h6 {
+    @apply !font-poppins !font-[600] !text-atsgetintouchsubtitle !leading-atsgetintouchsubtitlelh !text-darkgrey !max-w-[300px]
+  }
+
+  .textfield {
+    @apply !w-[100%] !font-poppins !my-[5px]
+  }
+
+  .atsinputfields {
+    @apply !border-b-[1px] !font-poppins !border-grey !text-atsinput !font-[500] !leading-atsinputlh focus:!outline-none focus:!ring-0
+  }
+
+  .atsinputlabel {
+    @apply !text-grey !text-atsinput !font-poppins !font-[600] !leading-atsinputlh
+  }
+
+  .atssubmitbutton {
+    @apply !flex !items-center !gap-[10px] !border-orange !rounded-[10px] !text-orange !font-poppins hover:!border-orange !px-[20px] !py-[8px] !my-[10px]
+  }
+
+  .formloadingsection {
+    @apply !flex !items-center !justify-center !gap-[10px] !w-[140px]
+  }
+
+  .atsbuttonsection {
+    @apply !flex !items-center !gap-[10px]
+  }
+}
+
+@media screen and (max-width:428px) {
+  .contactPage {
+    @apply !justify-center !px-[20px]
+  }
+  .gmap{
+    @apply !pr-[200px]
+  }
+}
+
+@media screen and (max-width:409px) {
+  .contactBox {
+    @apply !w-[150px]
+  }
+
+  .contactBox h6 {
+    @apply !text-atscontactinfo_lg 
+  }
+}
+
+@media screen and (max-width:395px) {
+  .servicesection h5 {
+    @apply !text-atsservicetitle_md
+  }
+  .servicesection h6 {
+    @apply !text-atsservicedesc_md
+  }
+}
+
+@media screen and (max-width:375px) {
+  .explorehere {
+    @apply !mx-[0]
+  }
+  .explorehere h6{
+    @apply !px-[30px]
+  }
+}
+
+@media screen and (max-width:366px) {
+  .flex-wrapper {
+    @apply !flex-wrap
+  }
+  .servicesection h5 {
+    @apply !text-atsservicetitle_sm
+  }
+  .servicesection h6 {
+    @apply !text-atsservicedesc_sm
+  }
+  /* .info-description, .contactmessage, .countersection, .servicesection, .contactPage, .explorehere h6{
+    @apply !px-[20px]
+  } */
+}
+
+
+@media screen and (max-width:360px) {
+  .contactPage {
+    @apply !px-[10px]
+  }
+
+  .contactBox {
+    @apply !w-[139px]
+  }
+
+  .contactBox h6 {
+    @apply !text-atscontactinfo_md
+  }
+
+  .contactBoxsubsection {
+    @apply !w-[35px] !h-[35px]
+  }
+
+  .contactBoxsubsection svg {
+    @apply !h-[15px] !w-[15px]
+  }
+}

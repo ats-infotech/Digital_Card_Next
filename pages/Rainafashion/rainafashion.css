@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.rainContactDetailMain {
+    background:
+        linear-gradient(to right, var(--purpledark) 3px, transparent 3px) 0 0,
+        linear-gradient(to right, var(--purpledark) 3px, transparent 3px) 0 100%,
+        linear-gradient(to left, var(--purpledark) 3px, transparent 3px) 100% 0,
+        linear-gradient(to left, var(--purpledark) 3px, transparent 3px) 100% 100%,
+        linear-gradient(to bottom, var(--purpledark) 3px, transparent 3px) 0 0,
+        linear-gradient(to bottom, var(--purpledark) 3px, transparent 3px) 100% 0,
+        linear-gradient(to top, var(--purpledark) 3px, transparent 3px) 0 100%,
+        linear-gradient(to top, var(--purpledark) 3px, transparent 3px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    box-shadow: inset 0px 0px 5px 0px #00000040;
+}
+
+body {
+    background-image: url('../../assets//image/rainabg.webp');
+}
+
+.carousel.carousel-slider .control-arrow {
+    height: 50px;
+    top: 220px !important;
+    color: var(--purpledark) !important;
+    background: var(--purpledark) !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+    background: var(--purpledark) !important;
+}
+
+.carousel {
+    margin-top: 40px;
+}
+
+.control-dots {
+    bottom: 40px !important;
+    height: 20px;
+    margin: 0px !important;
+}
+
+.dot {
+    background: var(--purpledark) !important;
+}
+
+@layer components {
+    .rainafashion {
+        @apply bg-white pt-[10px] pb-[70px]
+    }
+
+    .HomePage .logoImage {
+        @apply !w-[140px] !h-[140px] mx-auto pb-[26px] pt-[10px]
+    }
+
+    .compant-title h5{
+        @apply !text-companytitle !font-[600] !font-poppins !text-center !mb-[15px] !leading-companytitlelh
+    }
+
+    .compant-title h6{
+        @apply !text-desc !font-[600] !text-center !mb-[18px] !leading-desclh !font-poppins
+    }
+
+    .rainalogoimg {
+        @apply !w-[100%] !h-[100%] !object-contain !mx-auto
+    }
+
+    .contactsection {
+        @apply !flex !items-center !justify-center !pb-[20px]
+    }
+
+    .roundedIcon {
+        @apply !bg-purpledark !min-w-[35px] !h-[35px] !mx-[10px] !shadow-md !rounded-full !flex !items-center !justify-center !transition-all !duration-300 !ease-in-out
+    }
+
+    .roundedIconText {
+        @apply !text-roundedicontext !font-[600] !font-poppins !leading-roundedicontextlh !hidden !ml-[10px] !font-poppins
+    }
+
+    .roundedIcon:hover {
+        @apply !bg-purpledark !px-[20px]
+    }
+
+    .roundedIcon:hover .roundedIconText {
+        @apply !block !text-white !capitalize
+    }
+
+    .rainContactDetailMain {
+        @apply !pt-[20px] !pb-[60px] !pl-[30px] !relative
+    }
+
+    .roundedborderIcon {
+        @apply !w-[40px] !h-[40px] !mr-[20px] !shadow-md !rounded-full !flex !items-center !justify-center !border-[3px] !border-solid !border-purpledark !font-poppins
+    }
+
+    .roundedborderIcon .iconbg {
+        @apply !bg-purpledark !rounded-full !p-[8px] !flex !items-center !justify-center !border-[1px] !border-white
+    }
+
+    .roundedborderIconText a {
+        @apply !text-purpledark !text-rainacontactcard !font-poppins !leading-rainacontactcardlh !font-poppins !font-[600] !font-poppins
+    }
+
+    .RainfashionProducts {
+        @apply !py-[40px] !pb-[0px]
+    }
+
+    .rainapdfbtn{
+        @apply !flex !justify-center !items-center
+    }
+
+    .rainafashionproductssubsection{
+        @apply !px-[35px]
+    }
+
+    .purpleBorder-btn {
+        @apply !flex !font-poppins !w-[150px] !h-[45px] !items-center !justify-center !gap-[3px] !font-poppins !border-2 !border-solid !border-purpledark !rounded-full !py-[8px] !leading-rainaborderbtnlh !text-rainaborderbtn !font-[600] !capitalize !text-black hover:!bg-purpledark hover:!text-white !duration-300 !transition-all
+    }
+
+    .purpleBorder-btn:hover .downloadIcon {
+        @apply !text-white
+    }
+
+    .RainfashionProducts .carousel-root .carousel {
+        @apply !rounded-[30px]
+    }
+
+    .RainfashionProducts .carousel-root .carousel .thumbs-wrapper {
+        @apply !hidden
+    }
+
+    .productsection {
+        @apply !h-[100%] !bg-greypro !rounded-[30px] my-[30px]
+    }
+
+    .productItems {
+        @apply !w-auto !h-[400px] !mx-auto !cursor-pointer
+    }
+
+    .productItems img {
+        @apply !w-[100%] !h-[100%] !object-cover !rounded-[20px]
+    }
+
+    .abouMaskSection {
+        @apply !pt-[27px] !pb-[10px] !mb-[17px] !bg-[url('../../assets/image/dac/Aboutmask.png')] !bg-no-repeat bg-center bg-cover
+    }
+
+    .aboutusRainalogoImage {
+        @apply !w-[110px] !h-[110px] !mx-auto !mb-[14px]
+    }
+
+    .aboutusRainalogoImage img {
+        @apply !w-[100%] !h-[100%] !object-contain
+    }
+
+    .rainainquirysubsection {
+        @apply !shadow-default !rounded-b-[20px] !rounded-t-[30px]
+    }
+
+    .formInput {
+        @apply !flex !justify-center !items-center !gap-[12px] !py-[5px] !w-[300px]
+    }
+
+    .formborder {
+        @apply !rounded-[20px] !w-[100%] !border-b-[2px] !border-purpledark !mb-[35px] !w-[300px]
+    }
+
+    .rainaiframesection{
+        @apply !overflow-hidden !rounded-[30px] !h-[270px] !shadow-default mapwrapper !relative
+    }
+
+    .rainaiframeloadingsection{
+        @apply !flex !justify-center !items-center !h-[100%]
+    }
+
+    .rainaformsection{
+        @apply !w-[100%] !py-[30px] !px-[21px] !rounded-b-[20px] !mb-[30px]
+    }
+
+    .rainaformsubsection{
+        @apply !flex !justify-center flex-col !items-center
+    }
+
+    .clickmap {
+        @apply !hidden
+    }
+
+    .AboutRainaFashion h3{
+        @apply !font-[700] !leading-subtitlelh !text-subtitle !text-purpledark !mb-[10px] !mt-[5px] !text-center !font-poppins
+    }
+
+    .AboutRainaFashion h4{
+        @apply !text-rainaaboutusdesc !leading-rainaaboutusdesclh !text-bluedark !font-[600] !text-center !mb-[10px] !font-poppins
+    }
+
+    .AboutRainaFashion h5{
+        @apply !text-rainaaboutustitle !leading-rainaaboutustitlelh !text-lightColor !font-[600] !text-center !font-poppins !mb-[20px]
+    }
+
+    .joinus {
+        @apply !mb-[30px] !mt-[20px]
+    }
+
+    .joinus h3{
+        @apply !font-[700] !leading-joinusbtnlh !text-joinusbtn !text-purpledark !mb-[5px] !text-center !font-poppins !flex !items-center !gap-[15px] !justify-center
+    }
+
+    .joinus h4{
+        @apply !font-[600] !leading-joinusinfolh !text-joinusinfo !mb-[5px] !text-center !text-lightColor !font-poppins
+    }
+
+    .rainaFshionEnquiry h5{
+        @apply !font-[700] !leading-subtitlelh !text-subtitle !text-purpledark !mb-[30px] !text-center !font-poppins
+    }
+
+    .mapwrapper:hover .clickmap {
+        @apply !block !absolute !top-0 !left-0 !right-0 !bottom-0 !flex !items-center !justify-center !bg-black !opacity-10 !text-white !font-poppins !text-clickmap !font-[600] !leading-clickmaplh
+    }
+
+    .enquiryinputfield {
+        @apply !text-rainaenquiryfield !font-[600] !w-[100%] !outline-none
+    }
+
+    .enquiryinputfield::placeholder {
+        @apply !text-rainaenquiryfield !font-[600] !text-lightgrey
+    }
+
+    .enquiryformbtn{
+        @apply !w-[100%] !flex !items-center !gap-[13px] !bg-purpledark hover:bg-purpledark !rounded-[10px] !text-white !font-poppins !px-[20px] !py-[10px] !my-[10px] !text-formsubmitbtn !normal-case
+    }
+
+    .explorebtn {
+        @apply !leading-rainaexplorebtnlh !mt-[5px] !mb-[10px] !w-[130px] !h-[40px] !pr-[5px] !justify-end !font-poppins !border-2 !border-solid !border-purpledark !rounded-full !text-rainaexplorebtn !font-[600] !capitalize !text-black hover:!bg-purpledark hover:!text-white !duration-300 !transition-all
+    }
+
+    .categorybtn {
+        @apply !w-auto !h-[35px] !border-2 !border-purpledark !text-rainacontactbtn !py-[20px] !px-[30px] !pl-[34px] !capitalize !font-semibold !rounded-full hover:!bg-purpledark hover:!text-white hover:!border-purpledark
+    }
+
+    .qrsection {
+        @apply !w-[100%] !h-[85px] absolute !bottom-[25px] !right-0 !left-0 !animate-fade !flex !justify-end !pr-[15px] z-0
+    }
+
+    .downloadbtnsection {
+        @apply !flex !items-center !justify-center !gap-[30px]
+    }
+
+    .pdfbutton{
+        @apply !flex !justify-center !items-center
+    }
+
+    .productmainsection{
+        @apply !pb-[15px]
+    }
+
+    .productmainsection h3{
+        @apply !text-purpledark !leading-[30px] !text-rainaproductname !font-[600] !text-center !font-poppins
+    }
+
+    .productmainsubsection{
+        @apply !flex !items-center !justify-center !gap-[10px]
+    }
+
+    .sharebuttons{
+        @apply !bg-white !p-[5px] !rounded-[30px] !bg-white !shadow-default !flex !items-center !justify-center
+    }
+
+    .sharebuttons h6{
+        @apply !leading-[16px] !text-rainasharebtn !duration-300
+    }
+
+    /* ------------------- pdf --------------------- */
+
+    .particularpdfinfo{
+        @apply mt-[0px] text-rainapdf font-poppins font-[600] text-purpledark w-[500px]
+    }
+
+    .particularpdfdesc{
+        @apply text-rainapdf font-poppins font-[600] text-purpledark w-[500px]
+    }
+
+    .allproductpdfinfo{
+        @apply text-rainapdf font-poppins font-[600] text-purpledark w-[100px]
+    }
+
+    .sizesection {
+        @apply !flex !justify-center
+    }
+
+    .sizebutton{
+        @apply !mx-[5px] !bg-greypro !text-purpledark !my-[10px] !border-2 !h-[35px] !w-[35px] !rounded-[30px] text-[12px] leading-rainaproductdetailinfolh !font-[poppins] !font-[600] !border-purpledark hover:!bg-purpledark hover:!text-white !duration-300 !transition-all
+    }
+
+    .buybtnsection{
+        @apply !flex !justify-center px-[20px]
+    }
+
+    .buybtn{
+        @apply !w-[100%] !bg-purpledark !mb-[20px] !border-2 !border-solid !border-transparent !text-white !font-poppins !font-[600] !normal-case hover:!bg-white hover:!text-purpledark hover:!border-purpledark !rounded-[10px]
+    }
+
+    .socialsharebtns{
+        @apply !h-[35px] !w-[35px] !bg-white !flex !justify-center !items-center !rounded-[10px] !cursor-pointer hover:!bg-purpledark
+    }
+
+    .productpurpleBorder-btn {
+        @apply !flex !font-poppins !text-[13px] !w-[120px] !h-[40px] !mb-[20px] !py-[8px] !px-[31px] !items-center !justify-center !gap-[3px] !font-poppins !border-2 !border-solid !border-purpledark !rounded-full !py-[8px] !leading-rainaborderbtnlh !font-[600] !capitalize !text-black hover:!bg-purpledark hover:!text-white !duration-300 !transition-all
+    }
+
+    .productpurpleBorder-btn:hover .downloadIcon {
+        @apply !text-white
+    }
+
+    .pdfbutton p{
+        @apply !text-[12px]
+    }
+
+    .pdfbutton svg{
+        @apply !h-[20px] !w-[20px]
+    }
+
+}
+
+@media screen and (max-width:430px) {
+    .gmap {
+        @apply !pr-[200px]
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .downloadbtnsection{
+        gap: 20px !important;
+        margin-inline: 20px !important
+    }
+}
+
+@media screen and (max-width:380px) {
+    .formInput, .formborder {
+        @apply !w-[100%]
+    }
+    .formborder {
+        @apply !border-b-[2px]
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .productmainsection h3{
+        @apply !text-rainaproductname_md
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .productmainsection h3{
+        @apply !text-rainaproductname_sm 
+    }
+}

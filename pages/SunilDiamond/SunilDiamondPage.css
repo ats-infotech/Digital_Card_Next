@@ -1,0 +1,861 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "rsuite/dist/rsuite.css";
+
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a::after {
+    text-decoration: none;
+}
+
+.uploadsection {
+    border: 3px dashed #D9D9D9;
+    border-radius: 5px;
+    text-align: center;
+    height: 45px;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.uploadsection input {
+    display: none;
+}
+
+.uploadsection h2 {
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.MuiInputBase-input::placeholder {
+    color: #716c6c;
+    font-weight: 600;
+    font-family: 'poppins';
+}
+
+@layer components {
+    .sunildiamond {
+        @apply !max-w-[430px] !bg-white !pt-[10px] !pb-[0px]
+    }
+
+    .HomePage {
+        @apply !mx-auto !pb-[26px] !pt-[10px]
+    }
+
+    .logoImage {
+        @apply !w-[170px] !h-[170px] !pb-[26px] !pt-[10px]
+    }
+
+    .logoImage img {
+        @apply !w-[100%] !h-[100%] !object-contain
+    }
+
+    .logosection{
+        @apply !flex !w-[100%]
+    }
+
+    .sdqrsection{
+        @apply !flex !justify-end
+    }
+
+    .qrimage {
+        @apply !h-[80px] !w-[80px]
+    }
+
+    .companyname{
+        @apply !flex !flex-col !justify-evenly !ml-[20px] !relative !mt-[25px]
+    }
+
+    .companyname h5 {
+        @apply !text-companytitle !font-[600] !font-poppins !text-center !leading-companytitlelh !ml-[-15px]
+    }
+
+    .companyinfo h5 {
+        @apply !text-desc !font-[600] !text-blacklight !text-center !leading-desclh !font-poppins
+    }
+
+    .companyinfo h6 {
+        @apply !text-sdsubtitle !font-[600] !text-darkbrown !text-center !mb-[18px] !leading-sdsubtitlelh !font-poppins
+    }
+
+    .sdcontactsection {
+        @apply !flex !items-center !justify-center !pb-[20px]
+    }
+
+    .roundedIconn {
+        @apply !bg-yellowmild !min-w-[35px] !h-[35px] !mx-[10px] !shadow-md !rounded-full !flex !items-center !justify-center !transition-all !duration-300 !ease-in-out
+    }
+
+    .roundedIconnText {
+        @apply !text-roundedicontext !font-[600] !font-poppins !leading-roundedicontextlh !hidden !ml-[10px] !font-poppins
+    }
+
+    .roundedIconn:hover {
+        @apply !bg-yellowmild !px-[20px]
+    }
+
+    .roundedIconn:hover .roundedIconnText {
+        @apply !block !text-white !capitalize
+    }
+
+    .contact-section {
+        @apply !flex !h-[240px] !justify-center
+    }
+
+    .card-div {
+        @apply !mx-[5px] !rounded-[20px] !p-[10px] !h-[180px] !w-[180px] !my-[25px] !text-black !shadow-[0_0px_7px_rgba(0,0,0,0.15)]
+    }
+
+    .card-div:hover {
+        @apply !h-[210px] !w-[210px] !my-[10px] !p-[15px] !text-yellowmild !py-[25px] transition ease-in duration-500
+    }
+
+    .card-div h5 {
+        @apply !text-sdcontactcardtitle !font-[600] !text-inherit !mt-[15px] !ml-[10px] tracking-wider
+    }
+
+    .card-div:hover h5 {
+        @apply !text-yellowmild
+    }
+
+    .card-div h6 {
+        @apply !text-sdcontactcardsubtitle !font-[600] !text-greyblack !mt-[15px] !ml-[10px] !font-poppins
+    }
+
+    .card-div:hover a {
+        @apply !text-yellowmild
+    }
+
+    .card-div:hover .contact-button{ 
+        @apply !text-white 
+    }
+
+    .card-div:hover h6 {
+        @apply !text-greyblack
+    }
+
+    .card-div:hover .contact-button-section {
+        @apply !bg-yellowmild !text-white !capitalize !w-[155px]
+    }
+
+    .roundedIcon:hover {
+        @apply !text-yellowmild
+    }
+
+    .contact-button-section {
+        @apply !w-[145px] !h-[33px] !rounded-[10px] !mt-[15px] !mx-auto !flex !justify-center !items-center transition ease-in duration-500 !shadow-[0_0px_7px_rgba(0,0,0,0.15)]
+    }
+
+    .contact-button {
+        @apply !text-sdcontactcardbtn !font-[600] !capitalize !text-inherit
+    }
+
+    .roundedIcon {
+        @apply !bg-white !min-w-[35px] !h-[35px] !mx-[10px] !shadow-md !rounded-[5px] !flex !items-center !justify-center !transition-all !duration-300 !ease-in-out !text-inherit !shadow-[0_0px_2px_rgba(0,0,0,0.25)]
+    }
+
+    .sdaboutus {
+        @apply !mt-[30px] !max-w-[430px]
+    }
+
+    .sdaboutus h4{
+        @apply !font-[700] !leading-subtitlelh !text-subtitle !text-yellowmild !mb-[10px] !mt-[5px] !text-center !font-poppins
+    }
+
+    .aboutuscards {
+        @apply !flex !w-[400px] !w-[100%] !py-[30px] !mt-[-180px]
+    }
+
+    .Leftcard {
+        @apply !p-[20px] !rounded-[10px] !w-[125px] !h-[150px] !mt-[360px] !ml-[30px] !shadow-[0_0px_10px_rgba(0,0,0,0.25)] !border-b-4 !border-yellowmild
+    }
+
+    .sdactivesvg{
+        @apply !text-yellowmild !mb-[15px]
+    }
+
+    .sdinactivesvg{
+        @apply !text-mildgrey !mb-[15px]
+    }
+
+    .sdactivetext {
+        @apply !text-sdaboutus !leading-sdaboutuslh !text-yellowmild !font-[600] !font-poppins
+    }
+
+    .sdinactivetext {
+        @apply !text-sdaboutus !leading-sdaboutuslh !text-mildgrey !font-[600] !font-poppins
+    }
+
+    .Rightcard {
+        @apply !p-[19px] !mt-[190px] !rounded-[10px] !w-[125px] !h-[150px] !ml-[10px] !shadow-[0_0px_10px_rgba(0,0,0,0.25)] !border-b-4 !border-yellowmild
+    }
+
+    .Progressbar {
+        @apply !mt-[-35px]
+    }
+
+    .first-point {
+        @apply !relative !top-[-26px] !left-[6px]
+    }
+
+    .second-point {
+        @apply !relative !top-[-220px] !left-[6px]
+    }
+
+    .third-point {
+        @apply !relative !top-[-410px] !left-[6px]
+    }
+
+    .Joinus-section {
+        @apply !mt-[30px]
+    }
+
+    .joinussubsection{
+        @apply !flex !justify-center
+    }
+
+    .joinusbtnsection{
+        @apply !bg-yellowmild !text-white !h-[45px] !w-[180px] !flex !justify-center !rounded-[10px]
+    }
+
+    .Joinus-section h5 {
+        @apply !text-center !text-joinusbtn !font-poppins !font-[700] !text-white !flex !items-center !gap-[15px] !justify-center !leading-joinusbtnlh
+    }
+
+    .Joinus-section h6 {
+        @apply !text-center !text-joinusinfo !font-poppins !font-[600] !text-greyjoin !mt-[10px] !leading-joinusinfolh
+    }
+
+    .Enquiry-section {
+        @apply !mt-[30px] !mx-[30px]
+    }
+
+    .sdinquirysubsection {
+        @apply !overflow-hidden !rounded-[30px] !h-[325px] !shadow-default !mapwrapper !relative
+    }
+
+    .sdinquiryloadingsection{
+        @apply !flex !justify-center !items-center !h-[100%]
+    }
+
+    .Enquiry-section h5 {
+        @apply !text-center !text-yellowmild !font-[700] !font-poppins !mb-[50px] !text-subtitle !leading-subtitlelh
+    }
+
+    .clickmap {
+        @apply !hidden
+    }
+
+    .mapwrapper:hover .clickmap {
+        @apply !block !absolute !top-0 !left-0 !right-0 !bottom-0 !flex !items-center !justify-center !bg-black !opacity-10 !text-white !font-poppins !text-clickmap !font-[600] !leading-clickmaplh
+    }
+
+    .map-section {
+        @apply !pb-[50px] !pr-[200px]
+    }
+
+    .Search-Section {
+        @apply !w-[100%]
+    }
+
+    .border-hidden-section {
+        @apply !hidden
+    }
+
+    .uploadsubsection {
+        @apply !flex !justify-center !items-center !h-[38px] !w-[100%]
+    }
+
+    .sdsubmitbtn{
+        @apply !shadow-[0_0px_10px_rgba(0,0,0,0.25)] !h-[45px] !mt-[20px] !normal-case !font-poppins !rounded-[10px] !text-formsubmitbtn !font-[600] !w-[100%]
+    }
+
+    .submitbtnloadingsection{
+        @apply !flex !justify-center !items-center
+    }
+
+}
+
+@media screen and (max-width:430px) {
+
+    .card-div:hover h6 {
+        @apply !mt-[20px] !mb-[5px]
+    }
+
+    .aboutuscards {
+        @apply !flex !max-w-[380px]
+    }
+
+    .Leftcard {
+        @apply !ml-[5px]
+    }
+
+    .Rightcard {
+        @apply !ml-[15px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[4.5px]
+    }
+
+    .logosection{
+        @apply !flex !w-[100%] !justify-between !px-[10px]
+    }
+}
+
+@media screen and (max-width:430px) {
+
+    .Leftcard {
+        @apply !ml-[28px]
+    }
+
+    .Rightcard {
+        @apply !ml-[40px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-50px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-20px]
+    }
+
+    .companyname h5 {
+        @apply !text-companytitle_elg
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    .Leftcard {
+        @apply !ml-[24px]
+    }
+
+    .Rightcard {
+        @apply !ml-[38px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-42px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-16px]
+    }
+}
+
+@media screen and (max-width:420px) {
+
+    .Leftcard {
+        @apply !ml-[20px]
+    }
+
+    .Rightcard {
+        @apply !ml-[38px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-38px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-14px]
+    }
+}
+
+@media screen and (max-width:415px) {
+
+    .Leftcard {
+        @apply !ml-[20px]
+    }
+
+    .Rightcard {
+        @apply !ml-[34px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-34px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-12px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[290px]
+    }
+}
+
+@media screen and (max-width:410px) {
+
+    .card-div {
+        @apply !h-[170px] !w-[170px]
+    }
+
+    .card-div:hover {
+        @apply !h-[200px] !w-[200px]
+    }
+
+    .contact-button {
+        @apply !text-sdcontactcardbtn_lg
+    }
+
+    .contact-button-section {
+        @apply !w-[135px]
+    }
+
+    .Leftcard {
+        @apply !ml-[17px]
+    }
+
+    .Rightcard {
+        @apply !ml-[30px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-30px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-10px]
+    }
+
+    .companyname h5 {
+        @apply !text-companytitle_lg
+    }
+
+    .card-div h6 {
+        @apply !text-sdcontactcardsubtitle_lg
+    }
+}
+
+@media screen and (max-width:405px) {
+
+    .Leftcard {
+        @apply !ml-[17px]
+    }
+
+    .Rightcard {
+        @apply !ml-[28px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-26px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-8px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[280px]
+    }
+
+    .companyinfo h6 {
+        @apply !text-sdsubtitle_lg
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .Leftcard {
+        @apply !ml-[15px]
+    }
+
+    .Rightcard {
+        @apply !ml-[22px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-18px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-4px]
+    }
+}
+
+@media screen and (max-width:395px) {
+
+    .Leftcard {
+        @apply !ml-[15px]
+    }
+
+    .Rightcard {
+        @apply !ml-[17px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-13px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[-2px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[270px]
+    }
+}
+
+@media screen and (max-width:390px) {
+    .card-div {
+        @apply !h-[170px] !w-[160px]
+    }
+
+    .card-div:hover {
+        @apply !w-[190px]
+    }
+
+    .card-div h5 {
+        @apply !text-sdcontactcardtitle_lg 
+    }
+
+    .contact-button {
+        @apply !text-sdcontactcardbtn_md
+    }
+
+    .card-div:hover .contact-button-section {
+        @apply !w-[145px]
+    }
+
+    .contact-button-section {
+        @apply !w-[125px]
+    }
+
+    .Leftcard {
+        @apply !ml-[10px]
+    }
+
+    .Rightcard {
+        @apply !ml-[17px]
+    }
+
+    .Progressbar {
+        @apply !ml-[-7px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[1px]
+    }
+
+    .companyname h5 {
+        @apply !text-companytitle_md
+    }
+
+    .logoImage {
+        @apply !w-[160px] !h-[160px] !pb-[26px] !pt-[10px]
+    }
+
+    .qrimage {
+        @apply !h-[90px] !w-[90px]
+    }
+
+    .companyinfo h6 {
+        @apply !text-sdsubtitle_md
+    }
+}
+
+@media screen and (max-width:385px) {
+
+    .Progressbar {
+        @apply !ml-[0px]
+    }
+
+    .Leftcard {
+        @apply !ml-[7px]
+    }
+
+    .Rightcard {
+        @apply !ml-[17px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[4.5px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[260px]
+    }
+
+
+}
+
+@media screen and (max-width:380px) {
+
+    .aboutuscards {
+        @apply !flex !max-w-[380px]
+    }
+
+    .Leftcard {
+        @apply !ml-[5px]
+    }
+
+    .Rightcard {
+        @apply !ml-[15px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[4.5px]
+    }
+}
+
+@media screen and (max-width:380px) {
+    .Leftcard {
+        @apply !ml-[0px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[4px]
+    }
+
+}
+
+@media screen and (max-width:375px) {
+    .Leftcard {
+        @apply !ml-[0px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[3.5px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[250px]
+    }
+}
+
+@media screen and (max-width:370px) {
+    .card-div {
+        @apply !h-[170px] !w-[150px]
+    }
+
+    .card-div:hover {
+        @apply !w-[180px]
+    }
+
+    .card-div h5 {
+        @apply !text-sdcontactcardtitle_md
+    }
+
+    .card-div h6 {
+        @apply !text-sdcontactcardsubtitle_md
+    }
+
+    .contact-button-section {
+        @apply !w-[125px]
+    }
+
+    .Leftcard {
+        @apply !ml-[-2px]
+    }
+
+    .Rightcard {
+        @apply !ml-[15px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[3px]
+    }
+
+    .companyinfo h6 {
+        @apply !text-sdsubtitle_sm
+    }
+
+    .companyinfo h5 {
+        @apply !text-desc_lg
+    }
+
+    .companyname h5 {
+        @apply !text-companytitle_sm
+    }
+}
+
+@media screen and (max-width:365px) {
+
+    .Leftcard {
+        @apply !ml-[-2px]
+    }
+
+    .Rightcard {
+        @apply !ml-[15px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[3px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[240px]
+    }
+}
+
+@media screen and (max-width:360px) {
+
+    .Leftcard {
+        @apply !ml-[-5px]
+    }
+
+    .Rightcard {
+        @apply !ml-[15px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[3px]
+    }
+
+}
+
+@media screen and (max-width:355px) {
+
+    .Leftcard {
+        @apply !ml-[-10px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[230px]
+    }
+}
+
+@media screen and (max-width:350px) {
+    .card-div {
+        @apply !h-[170px] !w-[140px]
+    }
+
+    .card-div:hover {
+        @apply !w-[170px]
+    }
+
+    .card-div h5 {
+        @apply !text-sdcontactcardtitle_sm
+    }
+
+    .card-div h6 {
+        @apply !text-sdcontactcardsubtitle_sm
+    }
+
+    .contact-button {
+        @apply !text-sdcontactcardbtn_sm
+    }
+
+    .contact-button-section {
+        @apply !w-[115px]
+    }
+
+    .card-div:hover .contact-button-section {
+        @apply !w-[135px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[2.5px]
+    }
+
+    .companyname h5 {
+        @apply !text-companytitle_esm
+    }
+
+    .companyinfo h5 {
+        @apply !text-desc_md
+    }
+
+    .companyinfo h6 {
+        @apply !text-sdsubtitle_esm
+    }
+}
+
+@media screen and (max-width:345px) {
+    .Leftcard {
+        @apply !ml-[-15px]
+    }
+
+    .Rightcard {
+        @apply !ml-[15px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[2px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[220px]
+    }
+
+    .qrimage {
+        @apply !h-[100%] !w-[85px] 
+    }
+}
+
+@media screen and (max-width:340px) {
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[3px]
+    }
+}
+
+@media screen and (max-width:335px) {
+
+    .Leftcard {
+        @apply !ml-[-15px]
+    }
+
+    .Rightcard {
+        @apply !ml-[10px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[2px]
+    }
+
+    .border-adjust-section {
+        @apply !w-[210px]
+    }
+}
+
+@media screen and (max-width:330px) {
+
+    .companyinfo h5 {
+        @apply !text-desc_sm
+    }
+}
+
+@media screen and (max-width:325px) {
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[1px]
+    }
+
+    .logoImage {
+        @apply !w-[150px] !h-[150px] !pb-[26px] !pt-[10px]
+    }
+
+    .qrimage {
+        @apply !h-[80px] !w-[80px]
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .Leftcard {
+        @apply !ml-[-15px]
+    }
+
+    .Rightcard {
+        @apply !ml-[5px]
+    }
+
+    .first-point, .second-point, .third-point {
+        @apply !left-[2px]
+    }
+
+}

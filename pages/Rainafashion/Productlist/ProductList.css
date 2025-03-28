@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('../../../assets/image/rainabg.webp');
+}
+
+.Productlistsection{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.productlistbtn{
+    transform: translateX(200px);
+    transition: all 2.3s ease;
+}
+
+ .productlistbtn{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px !important;
+    color: var(--white) !important;
+    font-weight: 600;
+    text-transform: capitalize !important;
+    text-decoration: underline !important;
+}
+
+.productwrapper:hover .productlistbtn{
+    transform: translateX(0px);
+}
+
+.productwrapper:hover .Productlistsection::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@layer components{
+    .ProductListPage {
+        @apply !w-[100%] !bg-white !pt-[50px] !font-poppins pb-[90px] !min-h-[100vh]
+    }
+    .backbuttonsection{
+        @apply !ml-[5px] !pt-[10px] !mt-[0px] !fixed !top-0 !bg-white z-[10] !w-[100%] !max-w-[420px]
+    }
+    .backbuttonsubsection{
+        @apply !shadow-[0_0px_3px_rgba(0,0,0,0.35)] !rounded-[20px]
+    }
+    .productlistimage{
+        @apply !w-[170px] !h-[240px] 
+    }
+    .productlistbtn{
+        @apply !font-poppins
+    }
+    .sharebtn{
+        @apply !bg-purpledark  !p-[2px]
+    }
+    .productinfotext{
+        @apply !text-purpledark !font-poppins !font-[600] !text-rainaproductlistinfo
+    }
+    .productwrapper{
+        @apply !py-[0px] !mt-[15px] 
+    }
+    .productimagebox{
+        @apply !pb-[0px] !w-[100%] !flex !flex-wrap !mt-[5px] !justify-between
+    }
+    .productinfosection{
+        @apply !flex !justify-between !pt-[5px]
+    }
+}
+
+@media screen and (max-width:420px){
+    .productlistimage{
+        @apply !w-[160px] !h-[220px]
+    }
+    .productinfotext{
+        @apply !text-rainaproductlistinfo_lg 
+    }
+}
+
+@media screen and (max-width:400px){
+    .productlistimage{
+        @apply !w-[150px] !h-[210px]
+    }
+    .productimagebox svg{
+        @apply !h-[25px] !w-[25px]
+    }
+}
+
+@media screen and (max-width:380px){
+    .productlistimage{
+        @apply !w-[140px] !h-[200px]
+    }
+    .productinfotext{
+        @apply !text-rainaproductlistinfo_md
+    }
+}
+
+@media screen and (max-width:360px){
+    .productlistimage{
+        @apply !w-[130px] !h-[190px]
+    }
+    .productimagebox svg{
+        @apply !h-[20px] !w-[20px]
+    }
+    .productinfotext{
+        @apply !text-rainaproductlistinfo_sm
+    }
+}
+
+@media screen and (max-width:340px){
+    .productlistimage{
+        @apply !w-[120px] !h-[180px]
+    }
+    .productinfotext{
+        @apply  !text-rainaproductlistinfo_esm 
+    }
+}

@@ -1,0 +1,22 @@
+export const ATSFooterList = [
+    {
+        icon:'homeFillv2',
+        name:'Home',
+        path:'#home-section'
+    },
+    {
+        icon:'serviceFill',
+        name:'Services',
+        path:'#services-section'
+    },
+    {
+        icon:'contactFill',
+        name:'Contact',
+        path:'#contact-section'
+    },
+    {
+        icon:'menumoreFill',
+        name:'More',
+        path:'#more-section'
+    },
+]

@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('../../../assets/image/rainabg.webp');
+}
+
+@layer components {
+    .ProductDetailsPage {
+        @apply !bg-white !font-poppins !pb-[80px] !min-h-[100vh] !overflow-auto !pr-[0px]
+    }
+
+    .sizebox{
+        @apply !bg-white !text-black
+    }
+
+    .sizebox:hover{
+        @apply !bg-purpledark !text-white 
+    }
+
+    .sizebtn{
+        @apply !text-rainasizebtn !text-greysize !leading-rainasizebtnlh !underline !font-poppins !font-[500] !capitalize hover:!text-purpledark
+    }
+
+    .productssection{
+        @apply w-[100%] !h-auto !object-contain !flex !mb-[0px] !gap-[10px]
+    }
+
+    .leftimagesection{
+        @apply !w-[30%]
+    }
+
+    .productimagesection{
+        @apply !ml-[5px] !my-[10px] !border-2 !p-[4px] !rounded-[10px] !mr-[10px] !h-[80px] !w-[80px]
+    }
+
+    .productimagesection img{
+        @apply !h-[100%] !w-[100%] !object-contain !rounded-[10px]
+    }
+
+    .productimageselected{
+        @apply !w-[70%] !h-full !mt-[25px] !mr-[10px] !rounded-[10px] !flex !flex-col !justify-between
+    }
+
+    .productimageselectedsection {
+        @apply !h-[100%] !flex !flex-col
+    }
+
+    .productimageselectedsubsection{
+        @apply !flex !justify-between !mb-[10px] !items-center
+    }
+
+    .productimageselectedsubsection h5{
+        @apply !font-poppins !font-[600] !text-purpledark !ml-[15px] text-rainaproductdetailinfo leading-rainaproductdetailinfolh
+    }
+
+    .selectedimage{
+        @apply !h-[100%] !ml-[15px] !w-[90%]  !cursor-pointer
+    }
+
+    .selectedimage img{
+        @apply !h-[100%] !w-[100%] !object-contain
+    }
+
+    .selectedimagesubsection{
+        @apply !flex !justify-between !mt-[10px] !gap-[10px]
+    }
+
+    .selectedimage h5{
+        @apply !font-poppins !font-[600] text-purpledark text-rainaproductdetailinfo leading-rainaproductdetailinfolh
+    }
+
+    .sharesection{
+        @apply absolute !h-[200px] !w-[410px] !bg-white !rounded-[10px] !bottom-[50px] !shadow-[0_0px_10px_rgba(0,0,0,0.25)] 
+    }
+
+    .pdsharebtn{
+        @apply !mx-[15px] !h-[30px] !w-[30px] !rounded-[30px] !font-[poppins] !font-[600] !bg-purpledark
+    }
+
+    .pdsizesection {
+        @apply !flex !justify-center
+    }
+
+    .pdsizebutton{
+        @apply !mx-[5px] !text-purpledark !border-2 !h-[35px] !w-[35px] !rounded-[30px] text-[12px] leading-rainaproductdetailinfolh !font-[poppins] !font-[600] !border-purpledark hover:!bg-purpledark hover:!text-white !duration-300 !transition-all
+    }
+
+    .sizechartbtn{
+        @apply !flex !justify-end !mb-[10px]
+    }
+
+    .productdetailtext svg{
+        @apply !min-w-[8%]
+    }
+
+    .backbtnsection{
+        @apply !shadow-[0_0px_3px_rgba(0,0,0,0.35)] !rounded-[20px]
+    }
+
+    .producttextdetail{
+        @apply !max-w-[100%]
+    }
+
+    .productdetailtext{
+        @apply !leading-rainaproductdetaildesclh !font-[600] !text-rainaproductdetaildesc !text-detailgrey !font-poppins
+    }
+    
+    .pdbuybtnsection{
+        @apply !flex !justify-center px-[0px]
+    }
+
+    .pdbuybtn{
+        @apply !w-[100%] !bg-purpledark !mt-[10px] !border-2 !border-solid !border-transparent !text-white !font-poppins !font-[600] !normal-case hover:!bg-white hover:!text-purpledark hover:!border-purpledark !rounded-[10px]
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .selectedimage h5, .productimageselectedsubsection h5{
+        @apply !text-rainaproductdetailinfo_elg
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .selectedimage h5, .productimageselectedsubsection h5{
+        @apply !text-rainaproductdetailinfo_lg
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .selectedimage h5, .productimageselectedsubsection h5{
+        @apply !text-rainaproductdetailinfo_md
+    }
+    .buybtn{
+        @apply !w-[80px] !text-[12px]
+    }
+}
+
+@media only screen and (max-width: 340px){
+    .selectedimage h5, .productimageselectedsubsection h5{
+        @apply !text-rainaproductdetailinfo_sm
+    }
+}

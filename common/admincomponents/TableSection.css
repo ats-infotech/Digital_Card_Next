@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.datatable{
+    scrollbar-width: thin !important;
+}
+
+tr {
+    height: 30px !important;
+}
+
+.table-head-row{
+    font-size: var(--primaryfont) !important;
+}
+
+.table-body-row, .table-body-row p{
+    font-size: var(--primaryfont) !important;
+    font-weight: 600 !important;
+}
+
+.MuiTable-root .MuiTableHead-root tr th{
+    font-size: var(--primaryfont) !important;
+    font-weight: 600 !important;
+    color: white !important;
+    height: 50px !important;
+    padding: 0px 10px;
+}
+
+.MuiTable-root .MuiTableBody-root tr td{
+    padding: 10px 10px !important;
+    min-height: 50px !important;
+}

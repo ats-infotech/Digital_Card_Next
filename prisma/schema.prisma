@@ -1,0 +1,141 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Products {
+  id        Int             @id @default(autoincrement())
+  name      String
+  type      String
+  price     String
+  code      String
+  description String
+  createdAt DateTime        @default(now())
+  image     Previewimages[]
+  size      Sizes           @relation("pSize", fields: [id], references: [id])
+}
+
+model Sizes {
+  id              Int       @id @default(autoincrement())
+  extrasmall      Boolean
+  small           Boolean
+  meduim          Boolean
+  large           Boolean
+  extralarge      Boolean
+  extraextralarge Boolean
+  productsi       Products? @relation("pSize")
+}
+
+model Previewimages {
+  id            Int      @id @default(autoincrement())
+  filename      String
+  ImageId       Int
+  createdAt     DateTime @default(now())
+  productsimage Products @relation(fields: [ImageId], references: [id])
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String
+  email     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Profile {
+  id        Int      @id @default(autoincrement())
+  Phone     String
+  Tel       String
+  Address   String
+  Gmap      String
+  iframe    String
+  name      String
+  year      String
+  nature    String
+  Insta     String
+  Instalink String
+  Desc      String
+  otherlink String
+  linktitle String
+  Broadcastlink String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AtsProfile {
+  id        Int      @id @default(autoincrement())
+  facebook  String
+  instagram String
+  linkdin   String
+  twitter   String
+  mail      String
+  number    String
+  website   String
+  Location  String
+  gmap      String
+  iframe    String
+  Projects  Int
+  Clients   Int
+  Countries  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AtsServices {
+  id        Int      @id @default(autoincrement())
+  title     String
+  description String
+  image     String
+  subpart   AtsServiceInfo[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AtsServiceInfo {
+  id        Int      @id @default(autoincrement())
+  title     String
+  description AtsServiceDescription[]
+  ServiceId Int
+  type      AtsServices @relation(fields: [ServiceId], references: [id])
+}
+
+model AtsServiceDescription {
+  id            Int      @id @default(autoincrement())
+  description   String
+  SubServiceId  Int
+  createdAt     DateTime @default(now())
+  servicedescription AtsServiceInfo @relation(fields: [SubServiceId], references: [id])
+}
+
+model SunildiamondProfile {
+  id        Int      @id @default(autoincrement())
+  name      String
+  year      String
+  number    String
+  gmap      String
+  iframe    String
+  title     String
+  subtitle  String
+  fromday   String
+  today     String
+  fromtime  String
+  totime    String
+  email     String
+  Broadcastlink String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SunildiamondProduct {
+  id        Int      @id @default(autoincrement())
+  name      String
+  price     String
+  image     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
